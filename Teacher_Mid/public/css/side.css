@@ -2,14 +2,17 @@ body{
     margin: 0;
     padding: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    background: rgba(220, 185, 234, 0.199);
   }
   
   header{
     position: fixed;
     background: #ffffff;
-    padding: 20px;
-    width: 100%;
+    padding: 25px;
+    width: 13%;
     height: 30px;
+    margin-top: -1.6%;
+    padding-bottom: 50%;
   }
   
   .left_area h3{
@@ -44,7 +47,7 @@ body{
   }
   
   .sidebar {
-    background: #ffffff;
+    background: #fffefd;
     margin-top: 70px;
     padding-top: 30px;
     position: fixed;
@@ -107,16 +110,20 @@ body{
   
   #check:checked ~ .sidebar{
     left: -190px;
+   
+    
   }
   
   #check:checked ~ .sidebar a span{
-    display: none;
+    display:none;
+
   }
   
   #check:checked ~ .sidebar a{
     font-size: 20px;
-    margin-left: 170px;
+    margin-left: 190px;
     width: 80px;
+    
   }
   
   .content{
@@ -129,10 +136,10 @@ body{
   }
   
   #check:checked ~ .content{
-    margin-left: 60px;
+    margin-left: 250px;
   }
   
   #check{
-    display: none;
+    display:none;
   }
      
