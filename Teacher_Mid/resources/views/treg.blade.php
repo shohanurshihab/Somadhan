@@ -11,7 +11,7 @@
     <label for="email">
         Email:
     </label>
-    <input type="text" id="email" name="email">
+    <input type="email" id="email" name="email">
     <span style="color:red">@error('email'){{$message}}@enderror</span><br>
 <br>
     <label for="phn">

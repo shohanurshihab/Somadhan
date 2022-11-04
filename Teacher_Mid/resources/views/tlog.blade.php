@@ -15,4 +15,4 @@
     <span style="color:red">@error('pass'){{$message}}@enderror</span><br>
 
 <br><br>
-    <input type="submit" value="Register"></form>
+    <input type="submit" value="Login"></form>

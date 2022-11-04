@@ -32,7 +32,7 @@ class teacherRegcontroller extends Controller
                 $member->photo=$req->photo;
                 $member->dob=$req->dob;
                 $member->save();
-                return view("tlog");
+                return redirect("tlog");
             }
         }
 
