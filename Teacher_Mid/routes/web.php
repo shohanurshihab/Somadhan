@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\teacherRegcontroller;
+use App\Http\Controllers\tlogcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('treg');
-});
+Route::view("Register","treg");
+Route::post("treg",[teacherRegcontroller::class,'inputData']);
+Route::post("chk",[tlogcontroller::class,'checkLogin']);
+Route::view("tlog","tlog");
+Route::view("tdash","tdash");

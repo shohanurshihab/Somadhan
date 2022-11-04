@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Question', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id('q_id')->nullable();
             $table->string('s_id')->nullable();
             $table->string('qus')->nullable();
             $table->unsignedBigInteger('t_id')->nullable();
             //defining foreign key from teacher_info table->t_id to Appointment table t_id
-            $table->foreign('t_id')->references('t_id')->on('teacher info');
+            $table->foreign('t_id')->references('t_id')->on('teacher_infos');
             $table->string('ans')->nullable();
             $table->string('qus_photo')->nullable();
             $table->string('ans_photo')->nullable();
