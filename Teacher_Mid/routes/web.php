@@ -25,4 +25,5 @@ Route::view("tdash","tdash");
 Route::view("tques","tques");
 Route::view("tprofile","tprofile");
 Route::get("tques",[tquescontroller::class,'allques']);
-Route::get("tprofile/",[tprofcontroller::class,'showdata']);
+Route::get("tprofile",[tprofcontroller::class,'showdata']);
+Route::post("tprofile",[tprofcontroller::class,'updatedata']);

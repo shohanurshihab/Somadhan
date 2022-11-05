@@ -7,9 +7,12 @@
 @foreach($teacher_info as $teacher_info)
 
 
+
         <img src="#" class="profile_image" alt="DP">
         <h4>Profile Picture</h4>
         <br>
+        <form action="tprofile" method="POST">
+                @csrf
         Name:
         <input type="Text" name="" value="{{$teacher_info['name']}}">
         <br>
@@ -30,15 +33,13 @@
         <br>
         Date Of Birth:
         <input type="date" name="" value="{{$teacher_info['dob']}}">
+        <br>
+
+        <input type="submit" value="Update">
+</form>
     @endforeach 
 
-    <p>{{Session::get('name')}}</p>
-    <p>{{Session::get('email')}}</p>
-    <p>{{Session::get('phn')}}</p>
-    <p>{{Session::get('pass')}}</p>
-    <p>{{Session::get('cj')}}</p>
-    <p>{{Session::get('cv')}}</p>
-    <p>{{Session::get('db')}}</p>
+
   </center>
 
 

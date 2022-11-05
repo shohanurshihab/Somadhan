@@ -22,6 +22,7 @@ class tlogcontroller extends Controller
    $session = teacher_info::where('t_email', '=', $req->email)->where('password', '=', $req->pass)->get();  
    if (count($session)>0 && $req==true) {
 
+    $req->session()->put('id',$session[0]->t_id);    
     $req->session()->put('name',$session[0]->name);    
     $req->session()->put('email',$session[0]->t_email);
     $req->session()->put('phn',$session[0]->phoneNo);
