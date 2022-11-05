@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\teacher_info;
 use Illuminate\Http\Request;
+use session;
 
 class tlogcontroller extends Controller
 {
@@ -18,19 +19,25 @@ class tlogcontroller extends Controller
         
             "pass"=>"required"]);
 
-    //$member = new teacher_info();
+   $session = teacher_info::where('t_email', '=', $req->email)->where('password', '=', $req->pass)->get();  
+   if (count($session)>0 && $req==true) {
 
-   // $data =  teacher_info::find();
+    $req->session()->put('name',$session[0]->name);    
+    $req->session()->put('email',$session[0]->t_email);
+    $req->session()->put('phn',$session[0]->phoneNo);
+    $req->session()->put('pass',$session[0]->password);
+    $req->session()->put('cj',$session[0]->current_job);
+    $req->session()->put('cv',$session[0]->cv);
+    $req->session()->put('db',$session[0]->dob);
 
-   $eml = teacher_info:: where('t_email', '=', $req->email)->first(); 
-   $psk = teacher_info:: where('password', '=', $req->pass)->first(); 
-   if ($eml==true && $req==true && $psk==true) {
+    //echo $session[0];
+    
     return view("tdash");
    }
    else 
    {
-    return back() ->with('fail', 'This email is not registered.');
-   }
+    return back()->with('msg', 'This email is not registered.');
+   } 
 
     
  }

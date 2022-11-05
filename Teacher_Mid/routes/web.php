@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\teacherRegcontroller;
 use App\Http\Controllers\tlogcontroller;
+use App\Http\Controllers\tquescontroller;
+use App\Http\Controllers\tprofcontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +22,7 @@ Route::post("treg",[teacherRegcontroller::class,'inputData']);
 Route::post("chk",[tlogcontroller::class,'checkLogin']);
 Route::view("tlog","tlog");
 Route::view("tdash","tdash");
+Route::view("tques","tques");
+Route::view("tprofile","tprofile");
+Route::get("tques",[tquescontroller::class,'allques']);
+Route::get("tprofile/",[tprofcontroller::class,'showdata']);
