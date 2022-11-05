@@ -5,6 +5,7 @@ use App\Http\Controllers\teacherRegcontroller;
 use App\Http\Controllers\tlogcontroller;
 use App\Http\Controllers\tquescontroller;
 use App\Http\Controllers\tprofcontroller;
+use App\Http\Controllers\tcrappointmentcontroller;
 
 
 /*
@@ -19,11 +20,16 @@ use App\Http\Controllers\tprofcontroller;
 */
 Route::view("Register","treg");
 Route::post("treg",[teacherRegcontroller::class,'inputData']);
-Route::post("chk",[tlogcontroller::class,'checkLogin']);
+Route::post("tdash",[tlogcontroller::class,'checkLogin']);
+Route::get("logout",[tlogcontroller::class,'logout'])->name('logout');
 Route::view("tlog","tlog");
 Route::view("tdash","tdash");
 Route::view("tques","tques");
 Route::view("tprofile","tprofile");
-Route::get("tques",[tquescontroller::class,'allques']);
+Route::view("apnt","tcappnt");
+Route::get("tques",[tquescontroller::class,'unansques']);
+Route::get("tans",[tquescontroller::class,'ansques']);
 Route::get("tprofile",[tprofcontroller::class,'showdata']);
 Route::post("tprofile",[tprofcontroller::class,'updatedata']);
+Route::get("tdash",[tquescontroller::class,'quescount']);
+Route::get("apnt",[tcrappointmentcontroller::class,'appointment']);

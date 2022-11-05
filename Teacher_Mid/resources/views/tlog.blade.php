@@ -1,4 +1,4 @@
-<form action="chk" method="POST">
+<form action="tdash" method="POST">
     @csrf
 <br>
 <label for="email">

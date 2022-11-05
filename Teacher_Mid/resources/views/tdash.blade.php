@@ -1,20 +1,21 @@
 @extends('layouts.app')
 @section('content')
      <h2>Dashboard</h2> 
+     
     <div class="container">   
   
   
     <br>
      <a href="{{url('tques')}}" class="box">
-     20 <br><br>
+     {{$countnotans}} <br><br>
      Question Pending</a> 
      
-      <a href="#" class="box">
-      6 <br><br>
+      <a href="{{url('apnt')}}" class="box">
+      {{$countapp}} <br><br>
       Appointments</a> 
       
-      <a href="#" class="box">
-      18 <br><br> 
+      <a href="{{url('tans')}}" class="box">
+      {{$countans}} <br><br> 
       Question Answered</a> 
       
     

@@ -33,7 +33,7 @@ class tlogcontroller extends Controller
 
     //echo $session[0];
     
-    return view("tdash");
+    return redirect("tdash");
    }
    else 
    {
@@ -41,6 +41,19 @@ class tlogcontroller extends Controller
    } 
 
     
+ }
+
+ public function logout(Request $req)
+ {
+  $req->session()->forget('id');    
+  $req->session()->forget('name');    
+  $req->session()->forget('email');
+  $req->session()->forget('phn');
+  $req->session()->forget('pass');
+  $req->session()->forget('cj');
+  $req->session()->forget('cv');
+  $req->session()->forget('db');
+  return redirect('tlog');
  }
 
 

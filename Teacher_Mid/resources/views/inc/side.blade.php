@@ -35,7 +35,7 @@
       <a href="{{url('tprofile')}}"><i class="fas fa-cogs"></i><span>Profile</span></a>
       <a href="#"><i class="fas fa-bell"></i><span>Notification</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+      <a href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
     </div>
 
     <!--sidebar end-->
