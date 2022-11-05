@@ -9,4 +9,5 @@ class teacher_info extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    public $primaryKey = 't_id';
 }

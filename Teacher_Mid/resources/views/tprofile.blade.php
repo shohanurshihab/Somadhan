@@ -13,26 +13,27 @@
         <br>
         <form action="tprofile" method="POST">
                 @csrf
+                <input type="hidden" name="id" value="{{$teacher_info['t_id']}}">
         Name:
-        <input type="Text" name="" value="{{$teacher_info['name']}}">
+        <input type="Text" name="name" value="{{$teacher_info['name']}}">
         <br>
         Email:
-        <input type="Email" name="" value="{{$teacher_info['t_email']}}">
+        <input type="Email" name="email" value="{{$teacher_info['t_email']}}">
         <br>
         Phone Number:
-        <input type="Text" name="" value="{{$teacher_info['phoneNo']}}">
+        <input type="Text" name="phn" value="{{$teacher_info['phoneNo']}}">
         <br>
         Password:
-        <input type="Text" name="" value="{{$teacher_info['password']}}">
+        <input type="Text" name="pass" value="{{$teacher_info['password']}}">
         <br>
         Current Job:
-        <input type="Text" name="" value="{{$teacher_info['current_job']}}">
+        <input type="Text" name="cj" value="{{$teacher_info['current_job']}}">
         <br>
         CV:
-        <input type="Text" name="" value="{{$teacher_info['cv']}}">
+        <input type="Text" name="cv" value="{{$teacher_info['cv']}}">
         <br>
         Date Of Birth:
-        <input type="date" name="" value="{{$teacher_info['dob']}}">
+        <input type="date" name="dob" value="{{$teacher_info['dob']}}">
         <br>
 
         <input type="submit" value="Update">
