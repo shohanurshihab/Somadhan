@@ -22,19 +22,19 @@
      
     
     </header>
- 
+
     <!--header area end-->
     <!--sidebar start-->
     <div class="sidebar">
       <center>
-        <img src="" class="profile_image" alt="">
-        <h4>Teacher</h4>
+       
+        <h4></h4>
       </center>
-      
+
       <a href="{{url('tdash')}}"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
       <a href="{{url('tprofile')}}"><i class="fas fa-cogs"></i><span>Profile</span></a>
-      <a href="#"><i class="fas fa-bell"></i><span>Notification</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="{{url('tnotific')}}"><i class="fas fa-bell"></i><span>Notification</span></a>
+      <a href="{{url('tabout')}}"><i class="fas fa-info-circle"></i><span>About</span></a>
       <a href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
     </div>
 

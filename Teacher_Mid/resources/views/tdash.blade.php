@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
      <h2>Dashboard</h2> 
-     
+    
+    
     <div class="container">   
   
-  
+ 
     <br>
      <a href="{{url('tques')}}" class="box">
      {{$countnotans}} <br><br>
@@ -18,10 +19,11 @@
       {{$countans}} <br><br> 
       Question Answered</a> 
       
+      
     
     </div>
-
-    </div>
+    <div><img src="" class="profile_image" alt="DP"></div>
+    
 
   </body>
   <link rel="stylesheet" href="/css/side.css">

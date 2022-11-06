@@ -18,9 +18,18 @@ class tprofcontroller extends Controller
            return view('tprofile',['teacher_info'=>$data]);       
         }
             //$req->session()->put('name',$session[0]->t_id);  
-            //echo $session[0];
-       
-        
+            //echo $session[0];       
+    }
+    function showname()
+    {
+        if(session()->has('email'))
+        {
+           $tid=session()->get('id');
+           $data=  teacher_info::where('t_id',$tid)->get();
+           return view('inc.side',['teacher_info'=>$data]);       
+        }
+            //$req->session()->put('name',$session[0]->t_id);  
+            //echo $session[0];       
     }
     
     function updatedata(Request $req)
@@ -36,9 +45,7 @@ class tprofcontroller extends Controller
                 $tup->photo=$req->photo;
                 $tup->dob=$req->dob;
                 $tup->save();
-                return redirect("tdash");
-
-               
+                return redirect("tprofile");
 
     }
 }

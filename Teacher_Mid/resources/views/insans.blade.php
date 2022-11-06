@@ -2,7 +2,7 @@
 @section('content')
      <h2>Answering</h2> 
 @foreach($answer as $answer)
-     <form action="ans1" method="post" enctype="multipart/form-data">
+     <form action="/insans" method="post" enctype="multipart/form-data">
       @csrf
 
       <br><br>

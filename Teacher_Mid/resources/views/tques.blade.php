@@ -41,7 +41,7 @@
                     
         <td align="center">{{$question['qus_photo']}}</td>
 
-        <td align="center"><a href="{{url('insans')}}">Give Answer</a></td>
+        <td align="center"><a href={{"insans/" .$question['q_id'] }}>Give Answer</a></td>
                              
             
     </tr>

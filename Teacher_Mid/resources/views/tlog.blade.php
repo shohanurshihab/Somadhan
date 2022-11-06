@@ -29,7 +29,7 @@
 	
 		<div class="right">
 		<h5>Login</h5>
-		<p>Don't have an account? <a href="{{url('Register')}}">Creat Your Account</a> it takes less than a minute</p>
+		<p>Don't have an account? <a href="{{url('Register')}}">Create Your Account</a> it takes less than a minute</p>
 		<div class="inputs">
 			<input type="text" placeholder="email" name="email">
              @error('email'){{$message}}@enderror

@@ -16,9 +16,12 @@
         <th>Answer</th>
                 
         <th>Question Photo</th>
+
+        <th>Action</th>
       
     </tr>
     <tr>
+    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -44,6 +47,8 @@
         <td align="center">{{$question['ans']}}</td>
                     
         <td align="center">{{$question['qus_photo']}}</td>
+
+        <td align="center"><a href={{"insans/" .$question['q_id'] }}>Edit Answer</a></td>
                              
             
     </tr>

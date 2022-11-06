@@ -64,13 +64,13 @@ Email:
 
         CV:
    
-    <input type="file" id="cv" name="cv">
+    <input type="file" id="cv" name="cv" accept=".pdf">
     <span style="color:red">@error('cv'){{$message}}@enderror</span>
 <br>
 
         Photo:
 
-    <input type="file" id="photo" name="photo">
+    <input type="file" id="photo" name="photo" accept="image/*">
     <span style="color:red">@error('photo'){{$message}}@enderror</span><br>
 
         DoB:
