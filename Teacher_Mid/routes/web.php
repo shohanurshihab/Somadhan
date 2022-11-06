@@ -6,6 +6,7 @@ use App\Http\Controllers\tlogcontroller;
 use App\Http\Controllers\tquescontroller;
 use App\Http\Controllers\tprofcontroller;
 use App\Http\Controllers\tcrappointmentcontroller;
+use App\Http\Controllers\insainscontroller;
 
 
 /*
@@ -27,9 +28,13 @@ Route::view("tdash","tdash");
 Route::view("tques","tques");
 Route::view("tprofile","tprofile");
 Route::view("apnt","tcappnt");
+Route::view("insans","insans");
 Route::get("tques",[tquescontroller::class,'unansques']);
 Route::get("tans",[tquescontroller::class,'ansques']);
 Route::get("tprofile",[tprofcontroller::class,'showdata']);
 Route::post("tprofile",[tprofcontroller::class,'updatedata']);
 Route::get("tdash",[tquescontroller::class,'quescount']);
 Route::get("apnt",[tcrappointmentcontroller::class,'appointment']);
+
+Route::get("insans",[insainscontroller::class,'ans']);
+Route::post("ans1",[insainscontroller::class,'ansupdate']);

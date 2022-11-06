@@ -2,7 +2,7 @@
     
     width: 65%; 
     height: auto;
-    background: rgba(220, 185, 234, 0.007);
+    background: rgba(220, 185, 234, 0.078);
     /*add flexbox style*/
     display: flex; 
     flex-direction: row; 
@@ -17,7 +17,7 @@
         width: 240px;
         height:95px;
         /**/margin-top: 70px;
-        background: rgba(3, 82, 253, 0.148); 
+        background: rgba(178, 89, 255, 0.148); 
         box-sizing: border-box;
         text-align:center;
         font-size: 20px;
@@ -34,7 +34,7 @@
     }
 .box:hover{
     color: #9661ea;
-    box-shadow: 0 0 20px #9661ea;
+    box-shadow: 0 0 5px #9661ea;
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    transform: scale(1);
   }

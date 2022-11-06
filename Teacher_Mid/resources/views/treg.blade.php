@@ -1,57 +1,94 @@
 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Somadhan</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="/css/log.css">
+
+</head>
+<body>
 <form action="treg" enctype="multipart/form-data" method="POST">
-@csrf
-    <label for="name">
+    @csrf
+<!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Soma dhan</h1>
+		<p>Somadhan is your best companion for study. Access answers to all the question you have. Live tutors to help you out. <br>Join Today! </p>
+		<span>
+			<p>Visit our social media pages</p>
+			<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+		</span>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h1>Register</h1>
+		<p>Already have an account? <a href="{{url('tlog')}}">Log in now</a></p>
+		<div class="inputs">
+       
         Name:
-    </label>
+   
     <input type="text" id="name" name="name">
 <span style="color:red">@error('name'){{$message}}@enderror</span><br>
-<br>
-
-    <label for="email">
-        Email:
-    </label>
+       
+Email:   
     <input type="email" id="email" name="email">
     <span style="color:red">@error('email'){{$message}}@enderror</span><br>
-<br>
-    <label for="phn">
+
+   
         Phone No:
-    </label>
+   
     <input type="text" id="phn" name="phn">
     <span style="color:red">@error('phn'){{$message}}@enderror</span><br>
-<br>
-    <label for="pass">
+
         Password:
-    </label>
+ 
     <input type="text" id="pass" name="pass">
     <span style="color:red">@error('pass'){{$message}}@enderror</span><br>
-<br>
-    <label for="cj">
+
         Current Job:
-    </label>
+   
     <input type="text" id="cj" name="cj">
     <span style="color:red">@error('cj'){{$message}}@enderror</span><br>
-<br>
-    <label for="cv">
+
         CV:
-    </label>
+   
     <input type="file" id="cv" name="cv">
-    <span style="color:red">@error('cv'){{$message}}@enderror</span><br>
+    <span style="color:red">@error('cv'){{$message}}@enderror</span>
 <br>
 
-    <label for="photo">
         Photo:
-    </label>
+
     <input type="file" id="photo" name="photo">
     <span style="color:red">@error('photo'){{$message}}@enderror</span><br>
-    <br>
-    <label for="dob">
+
         DoB:
-    </label>
+   
     <input type="date" id="dob" name="dob">
     <span style="color:red">@error('dob'){{$message}}@enderror</span><br>
-<br><br>
-    <input type="submit" value="Register">
-
-
+		</div>
+			
+	
+			
+		
+			
+			<button>Register</button>
+	</div>
+	
+</div>
+<!-- partial -->
 </form>
+</body>
+</html>
+

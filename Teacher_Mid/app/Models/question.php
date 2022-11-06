@@ -9,4 +9,5 @@ class question extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    public $primaryKey = 'q_id';
 }

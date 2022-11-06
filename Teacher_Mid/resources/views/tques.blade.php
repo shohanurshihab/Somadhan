@@ -5,7 +5,7 @@
 
 <h1>Question List</h1>
 
-<table border="0" width="100%">
+<table border="0" width="90%">
     <tr>
         <th>Question ID</th>
           
@@ -14,9 +14,12 @@
         <th>Question</th>
                 
         <th>Question Photo</th>
+
+        <th>Action</th>
       
     </tr>
     <tr>
+    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -37,6 +40,8 @@
         <td align="center">{{$question['qus']}}</td>
                     
         <td align="center">{{$question['qus_photo']}}</td>
+
+        <td align="center"><a href="{{url('insans')}}">Give Answer</a></td>
                              
             
     </tr>

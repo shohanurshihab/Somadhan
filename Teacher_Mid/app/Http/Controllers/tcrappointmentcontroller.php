@@ -9,9 +9,13 @@ class tcrappointmentcontroller extends Controller
 {
      function appointment()
     {
-        $data =  appointment::all();   
-        //$data1 = appointment:: where('status','Answered')->get();    
+        if(session()->has('email'))
+        {
+            
+        $tid=session()->get('id');     
+        $data =  appointment::where('t_id',$tid)->get();   
         return view('tcappnt')->with('apnt',$data);
         }
+    }
 
 }

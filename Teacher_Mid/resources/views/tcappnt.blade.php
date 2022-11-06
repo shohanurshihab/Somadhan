@@ -5,7 +5,7 @@
 
 <h1>Appointment List</h1>
 
-<table border="0" width="100%" style="color:mediumslateblue ;">
+<table border="0" width="100%" style="color:mediumslateblue">
     <tr>
         <th>Appointment ID</th>
           
@@ -43,28 +43,13 @@
                     
         <td align="center">{{$appointment['date']}}</td>
 
-        <td align="center" style="color:mediumpurple">
-        {{$appointment['status']}} <br>
-        <select name="status" id="status" style="color:mediumpurple">
-        <option>Available</option>
-        <option>Unavailable</option>
-        </select>
-        
-  <input type="submit" value="Submit" style="color:mediumpurple">
-</td>
-       
-  <br><br>
-  
-
-            
+        <td align="center">{{$appointment['status']}}</td>
+        <td>&nbsp;</td>
+            <br>
     </tr>
     @endforeach
 </table>
-</center>
-    
-   
-      
-    
+</center> 
     </div>
 
     </div>
