@@ -35,6 +35,7 @@ Route::get("tprofile",[tprofcontroller::class,'showdata']);
 Route::get("inc.side",[tprofcontroller::class,'showname']);
 Route::post("tprofile",[tprofcontroller::class,'updatedata']);
 Route::get("tdash",[tquescontroller::class,'quescount']);
+//Route::get("tdash",[tprofcontroller::class,'showdata']);
 Route::get("apnt",[tcrappointmentcontroller::class,'appointment']);
 Route::get("insans/{q_id}",[insainscontroller::class,'ans']);
 Route::post("insans",[insainscontroller::class,'ansupdate']);

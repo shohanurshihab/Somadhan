@@ -44,7 +44,12 @@ class tquescontroller extends Controller
            $notansweredQus= $qus2->count();
            
            $app = appointment::where('t_id',$tid)->count();
-           return view('tdash')->with('countans',$answeredQus)->with('countnotans',$notansweredQus)->with('countapp',$app);
+
+           //$tid=session()->get('id');
+           $data=  teacher_info::where('t_id',$tid)->get();
+           //return view('tdash',['teacher_info'=>$data]); 
+
+           return view('tdash')->with('countans',$answeredQus)->with('countnotans',$notansweredQus)->with('countapp',$app)->with('teacher_info',$data);
 
         }
            

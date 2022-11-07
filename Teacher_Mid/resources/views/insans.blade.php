@@ -36,7 +36,7 @@
 <input type="file" name="an2" id="" value="{{$answer['ans_photo']}}">  
    <br>
     <br>
-     <input type="submit" value="insert">  
+     <input type="submit" value="Submit Answer">  
    
 
 @endforeach

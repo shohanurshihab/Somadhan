@@ -42,10 +42,22 @@ class tprofcontroller extends Controller
                 $tup->password=$req->pass;
                 $tup->current_job=$req->cj;
                 $tup->cv=$req->cv;
-                $tup->photo=$req->photo;
+                $img = $req->file('photo');
+                $name = $img->getClientOriginalName();
+                $fileName = 'public/assets/images/'. $name;
+                $img->move('public/assets/images/', $fileName);
+                $tup->photo = $fileName;
+
+                //$tup->photo=$req->photo;
+
                 $tup->dob=$req->dob;
                 $tup->save();
                 return redirect("tprofile");
 
     }
+
+      
+    
+
+
 }

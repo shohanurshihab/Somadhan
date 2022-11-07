@@ -17,7 +17,7 @@
                 
         <th>Question Photo</th>
 
-        <th>Action</th>
+        <!--th>Action</th-->
       
     </tr>
     <tr>
@@ -26,29 +26,29 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <!--td>&nbsp;</td-->
     </tr>
    
     @foreach($questions as $question)
     <tr>
 <col style="width:10%">
 <col style="width:10%">
-<col style="width:25%">
+<col style="width:40%">
 <col style="width:30%">
-<col style="width:15%">
+<!--col style="width:15%"-->
 
 
         <td align="center">{{$question['q_id']}}</td>
           
         <td align="center">{{$question['s_id']}}</td>
           
-        <td align="center">{{$question['qus']}}</td>
+        <td align="left">{{$question['qus']}}</td>
 
         <td align="center">{{$question['ans']}}</td>
                     
         <td align="center">{{$question['qus_photo']}}</td>
 
-        <td align="center"><a href={{"insans/" .$question['q_id'] }}>Edit Answer</a></td>
+        <!--td align="center"><a href={{"insans/" .$question['q_id'] }}>Edit Answer</a></td-->
                              
             
     </tr>
